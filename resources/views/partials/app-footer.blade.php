@@ -3,14 +3,14 @@
       style="grid-template-columns: auto 1fr; column-gap: 2rem;">
 
       <div class="app-footer-copyright flex-grow-1 text-muted">
-         &copy; 2026 PT. Indraco Global Indonesia<span class="d-none d-xxl-inline">, dikembangkan oleh Tim
+         &copy; {{ date('Y') }} PT. Indraco Global Indonesia<span class="d-none d-xxl-inline">, dikembangkan oleh Tim
             WEBDEV</span>
       </div><!-- end app footer copyright -->
 
       <div class="app-footer-utility d-flex ms-auto align-items-center gap-3 text-end text-nowrap">
          <div class="fw-bold hstack gap-2">
-            <div class="border-end pe-2">20:45 WIB</div>
-            <div>Minggu, 02 November 2026</div>
+            <div class="border-end pe-2" data-live-time>{{ date('H:i') }} WIB</div>
+            <div data-live-date>{{ \Carbon\Carbon::now()->isoFormat('dddd, DD MMMM Y') }}</div>
          </div>
 
          <div class="dropdown" title="Notifikasi Dokumen">

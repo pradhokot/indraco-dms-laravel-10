@@ -42,3 +42,28 @@ body {
    min-height: 720px;
    min-width: 1024px;
 }
+
+/* Helper Gambar Responsif Tema */
+[data-bs-theme="dark"] .theme-img-light {
+   display: none !important;
+}
+
+[data-bs-theme="light"] .theme-img-dark,
+:root:not([data-bs-theme="dark"]) .theme-img-dark {
+   display: none !important;
+}
+
+/* Animasi Putaran Berlawanan Arah Jarum Jam (Refresh) */
+@keyframes spin-counter-clockwise {
+   from {
+      transform: rotate(0deg);
+   }
+   to {
+      transform: rotate(-360deg);
+   }
+}
+
+.spin-counter-clockwise {
+   display: inline-block;
+   animation: spin-counter-clockwise 0.6s linear infinite;
+}

@@ -1,3 +1,16 @@
+@php
+    $fromRole = request('from_role', request('role', 'departemen'));
+    $fromDept = request('from_dept', request('dept', 'FAT [Finance, Accounting, and Tax]'));
+
+    $roleLabels = [
+        'admin' => ['title' => 'SUPER ADMIN', 'sub' => '[IT & Sistem Manajemen]'],
+        'gudang' => ['title' => 'ADMIN GUDANG', 'sub' => '[Unit Penyimpanan & Arsip]'],
+        'departemen' => ['title' => 'DEPARTEMEN', 'sub' => '[' . $fromDept . ']'],
+    ];
+
+    $activeInfo = $roleLabels[$fromRole] ?? $roleLabels['departemen'];
+@endphp
+
 @extends('layouts.auth')
 
 @section('title', 'Login - INDRACO Document Management System')
@@ -15,7 +28,7 @@
 
       <div class="alert alert-success d-flex gap-2 align-items-baseline rounded-1">
          <i class="bi bi-info-circle-fill fs-5" aria-hidden="true"></i>
-         <div>Anda berhasil keluar dari akun. Silakan login kembali.</div>
+         <div>Anda berhasil keluar dari akun {{ $activeInfo['title'] }} {{ $activeInfo['sub'] }}.</div>
       </div>
 
       <form action="{{ url('/dashboard') }}" method="get" id="form-login" class="vstack row-gap-3">
@@ -77,7 +90,7 @@
          </div>
 
          <button class="btn btn-primary w-100 rounded-1 btn-lg" type="submit">
-            MASUK KE DMS <i class="bi bi-box-arrow-in-right" aria-hidden="true"></i>
+            LOGIN <i class="bi bi-box-arrow-in-right" aria-hidden="true"></i>
          </button>
 
       </form><!-- end form login -->
@@ -85,7 +98,7 @@
    </div><!-- end card login body -->
 
    <div class="card-login-footer p-3 bg-body-tertiary border-top text-center small text-muted">
-      &copy; 2026 PT. Indraco Global Indonesia <br> dikembangkan oleh Tim WEBDEV
+      &copy; {{ date('Y') }} PT. Indraco Global Indonesia <br> dikembangkan oleh Tim WEBDEV
    </div><!-- end card login footer -->
 
 </main><!-- end card login -->

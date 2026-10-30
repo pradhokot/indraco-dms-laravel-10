@@ -51,7 +51,7 @@
          <!-- Reusable Utility Buttons (Theme, Refresh, Fullscreen) -->
          <x-utility-buttons size="sm" />
 
-         <a href="{{ url('/login') }}" class="btn btn-danger rounded-1 btn-sm" title="Keluar Akun">
+         <a href="{{ url('/login?status=logout&from_role=' . $currentRole . '&from_dept=' . urlencode($deptName)) }}" class="btn btn-danger rounded-1 btn-sm" title="Keluar Akun">
             <i class="bi bi-box-arrow-right" aria-hidden="true"></i> LOGOUT
          </a>
 

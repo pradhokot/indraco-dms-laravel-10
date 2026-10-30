@@ -9,6 +9,7 @@
    <link rel="stylesheet" href="{{ asset('assets/vendors/bootstrap-5.3.8-dist/css/bootstrap.min.css') }}">
    <link rel="stylesheet" href="{{ asset('assets/vendors/bootstrap-icons-1.13.1/bootstrap-icons.min.css') }}">
    <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
+   <script src="{{ asset('assets/js/app.js') }}"></script>
    <style>
       .app-content {
          padding: 2rem;
