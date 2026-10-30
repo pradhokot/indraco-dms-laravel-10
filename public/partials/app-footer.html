@@ -1,0 +1,46 @@
+<footer class="app-footer py-1 bg-primary-subtle border-top small">
+   <div class="app-footer-container container-fluid d-grid align-items-center"
+      style="grid-template-columns: auto 1fr; column-gap: 2rem;">
+
+      <div class="app-footer-copyright flex-grow-1 text-muted">
+         &copy; 2026 PT. Indraco Global Indonesia<span class="d-none d-xxl-inline">, dikembangkan oleh Tim
+            WEBDEV</span>
+      </div><!-- end app footer copyright -->
+
+      <div class="app-footer-utility d-flex ms-auto align-items-center gap-3 text-end text-nowrap">
+         <div class="fw-bold hstack gap-2">
+            <div class="border-end pe-2">20:45 WIB</div>
+            <div>Minggu, 02 November 2026</div>
+         </div>
+
+         <div class="dropdown" title="Notifikasi Dokumen">
+            <button class="btn rounded-0 border-0 shadow-none p-0" type="button" data-bs-toggle="dropdown"
+               data-bs-target="#dropdown-notification" aria-label="Notifikasi dokumen">
+               <i class="bi bi-bell-fill d-grid fs-5" aria-hidden="true"></i>
+               <span class="p-1 bg-danger rounded-circle position-absolute top-0 end-0 border border-light"></span>
+            </button>
+            <div id="dropdown-notification" class="dropdown-menu rounded-1 shadow">
+               <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+               <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+               <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+               <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+            </div>
+         </div>
+
+         <button class="btn rounded-0 border-0 shadow-none p-0" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#setting" aria-label="Pengaturan halaman" title="Pengaturan Halaman">
+            <i class="bi bi-gear-fill d-grid fs-5" aria-hidden="true"></i>
+         </button>
+
+         <div class="hstack">
+            <div class="text-bg-success p-1" title="Koneksi Terhubung">
+               <i class="bi bi-wifi d-grid fs-5"></i>
+            </div>
+            <div class="text-bg-danger p-1" title="Koneksi Terputus">
+               <i class="bi bi-wifi-off d-grid fs-5"></i>
+            </div>
+         </div>
+      </div><!-- end app footer utility -->
+
+   </div>
+</footer><!-- end app footer -->

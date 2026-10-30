@@ -1,0 +1,49 @@
+<style>
+   #app-nav .nav-link {
+      color: color-mix(in srgb, currentColor 70%, transparent);
+
+      &:hover,
+      &:focus-within {
+         background-color: var(--bs-primary-bg-subtle);
+         color: color-mix(in srgb, currentColor 100%, transparent);
+      }
+
+      &.active {
+         color: white;
+      }
+   }
+</style>
+<nav aria-label="navigasi utama" id="app-nav" class="bg-primary-subtle bg-gradient border-bottom shadow">
+   <ul class="nav nav-pills flex-nowrap text-nowrap overflow-y-hidden overflow-x-auto text-capitalize fw-semibold">
+      <li class="nav-item border-end position-sticky start-0 bg-primary-subtle bg-gradient">
+         <a href="#" class="nav-link rounded-0 active" aria-current="page">
+            <i class="bi bi-house-fill" aria-hidden="true"></i>
+            <span class="visually-hidden">beranda</span>
+         </a>
+      </li>
+      <li class="nav-item border-end">
+         <a href="#" class="nav-link rounded-0">pengajuan simpan</a>
+      </li>
+      <li class="nav-item border-end">
+         <a href="#" class="nav-link rounded-0">pengajuan tarik</a>
+      </li>
+      <li class="nav-item border-end">
+         <a href="#" class="nav-link rounded-0">pengajuan perpanjang</a>
+      </li>
+      <li class="nav-item border-end">
+         <a href="#" class="nav-link rounded-0">pengajuan pemusnahan</a>
+      </li>
+      <li class="nav-item border-end">
+         <a href="#" class="nav-link rounded-0">inventaris dokumen</a>
+      </li>
+      <li class="nav-item border-end">
+         <a href="#" class="nav-link rounded-0">log/ riwayat dokumen</a>
+      </li>
+      <li class="nav-item border-end">
+         <a href="#" class="nav-link rounded-0">denah 2D gudang</a>
+      </li>
+      <li class="nav-item border-end">
+         <a href="#" class="nav-link rounded-0">manajemen akun</a>
+      </li>
+   </ul>
+</nav><!-- end app nav -->

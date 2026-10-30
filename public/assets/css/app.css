@@ -1,0 +1,44 @@
+:root,
+[data-bs-theme="light"] {
+   --indraco-color-1: #00635b;
+   --indraco-color-2: #fd4f00;
+   --bs-border-color: color-mix(in srgb, var(--bs-body-color) 50%, transparent);
+}
+
+[data-bs-theme="dark"] {
+   --bs-border-color: color-mix(in srgb, var(--bs-body-color) 50%, transparent);
+}
+
+.dropdown-menu {
+   --bs-dropdown-border-color: var(--bs-border-color);
+}
+
+.vr {
+   background-color: var(--bs-border-color);
+   opacity: 1;
+}
+
+*::placeholder {
+   color: inherit !important;
+   opacity: .5 !important;
+}
+
+html,
+body {
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+}
+
+body {
+   font-family: monospace;
+   font-size: 1rem;
+}
+
+.app-wrapper {
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+   min-height: 720px;
+   min-width: 1024px;
+}

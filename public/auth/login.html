@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Login - INDRACO Document Management System</title>
+   <link rel="shortcut icon" href="../assets/images/icon_indraco.ico" type="image/x-icon">
+   <link rel="stylesheet" href="../assets/vendors/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+   <link rel="stylesheet" href="../assets/vendors/bootstrap-icons-1.13.1/bootstrap-icons.min.css">
+   <link rel="stylesheet" href="../assets/css/app.css">
+</head>
+
+<body>
+   <div class="app-wrapper position-relative"
+      style="background-image: url(../assets/images/indraco_bg.jpg); background-repeat: no-repeat; background-position: center; background-size: cover;">
+
+      <div class="bg-overlay w-100 h-100 position-absolute top-50 start-50 z-0"
+         style="background-image: radial-gradient(transparent, var(--bs-body-bg)); background-repeat: no-repeat; background-position: center; background-size: cover; backdrop-filter: blur(2px); transform: translate(-50%, -50%) scale(1.2);">
+      </div><!-- end bg overlay -->
+
+      <div class="login-utility-menu position-absolute top-0 end-0 m-3 z-2">
+         <div class="btn-group btn-group-sm border rounded-1 bg-body">
+            <button class="btn" type="button" aria-label="Ubah tema" title="Ubah Tema">
+               <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
+            </button>
+            <div class="vr"></div>
+            <button class="btn" type="button" aria-label="Segarkan halaman" title="Segarkan Halaman">
+               <i class="bi bi-arrow-counterclockwise" aria-hidden="true"></i>
+            </button>
+            <div class="vr"></div>
+            <button class="btn" type="button" aria-label="Layar penuh" title="Layar Penuh [Fullscreen]">
+               <i class="bi bi-fullscreen" aria-hidden="true"></i>
+            </button>
+         </div>
+         <button class="btn btn-sm btn-danger rounded-1" type="button" aria-label="Tutup aplikasi"
+            title="Tutup Aplikasi">
+            <i class="bi bi-power" aria-hidden="true"></i>
+         </button>
+      </div><!-- end login utility menu -->
+
+      <main
+         class="card-login bg-body rounded border overflow-hidden shadow vstack position-absolute top-50 start-50 translate-middle z-1"
+         style="min-width: 360px; max-height: calc(100% - 60px);">
+
+         <header class="card-login-header p-3 text-center bg-primary-subtle bg-gradient border-bottom">
+            <img src="../assets/images/logo_indraco.png" alt="Logo INDRACO" class="w-100 h-auto mb-2"
+               style="max-width: 210px;">
+            <h1 class="fs-6 mb-0">DMS [Document Management System]</h1>
+         </header><!-- end card login header -->
+
+         <div class="card-login-body p-3 flex-grow-1 overflow-y-auto overflow-x-hidden">
+
+            <div class="alert alert-success d-flex gap-2 align-items-baseline rounded-1">
+               <i class="bi bi-info-circle-fill fs-5" aria-hidden="true"></i>
+               Anda berhasil keluar dari akun ...
+            </div>
+
+            <form action="" method="post" id="form-login" class="vstack row-gap-3">
+               <div class="form-group">
+                  <label for="demo-user" class="small mb-1 fw-bold">Demo User</label>
+                  <div class="input-group">
+                     <span class="input-group-text rounded-start-1" aria-hidden="true">
+                        <i class="bi bi-people-fill"></i>
+                     </span>
+                     <select name="demo-user" id="demo-user" class="form-select rounded-end-1">
+                        <option value="" disabled selected>-- Pilih Akun --</option>
+                        <option value="admin">Admin</option>
+                        <option value="gudang">Gudang</option>
+                        <option value="HCS">HCS</option>
+                        <option value="FAT">FAT</option>
+                        <option value="GA">GA</option>
+                        <option value="logistik">Logistik</option>
+                        <option value="marketing">Marketing</option>
+                     </select>
+                  </div>
+               </div><!-- end demo user -->
+
+               <div class="form-group">
+                  <label for="username" class="small mb-1 fw-bold">Nama Pengguna (Username)</label>
+                  <div class="input-group">
+                     <span class="input-group-text rounded-start-1" aria-hidden="true">
+                        <i class="bi bi-person-fill"></i>
+                     </span>
+                     <input type="text" name="username" id="username" class="form-control rounded-end-1"
+                        placeholder="Username" autocomplete="username" required>
+                  </div>
+                  <div class="invalid-feedback">Nama Pengguna yang Anda masukkan salah!</div>
+               </div>
+
+               <div class="form-group">
+                  <label for="password" class="small mb-1 fw-bold">Kata Sandi (Password)</label>
+                  <div class="input-group">
+                     <span class="input-group-text rounded-start-1" aria-hidden="true">
+                        <i class="bi bi-lock-fill"></i>
+                     </span>
+                     <input type="password" name="password" id="password" class="form-control" placeholder="Password"
+                        autocomplete="current-password" required>
+                     <button class="btn border-secondary rounded-end-1" type="button" aria-label="Tampilkan kata sandi">
+                        <i class="bi bi-eye-fill" aria-hidden="true"></i>
+                        <i class="bi bi-eye-slash-fill" aria-hidden="true"></i>
+                     </button>
+                  </div>
+                  <div class="invalid-feedback">Kata Sandi yang Anda masukkan salah!</div>
+               </div>
+
+               <div class="form-check">
+                  <input class="form-check-input rounded-0" type="checkbox" name="remember" value="1" id="save-input">
+                  <label class="form-check-label" for="save-input">Simpan Akun</label>
+               </div>
+
+               <button class="btn btn-primary w-100 rounded-1 btn-lg" type="submit">
+                  LOGIN <i class="bi bi-box-arrow-in-right" aria-hidden="true"></i>
+               </button>
+
+            </form><!-- end form login -->
+
+         </div><!-- end card login body -->
+
+         <div class="card-login-footer p-3 bg-body-tertiary border-top text-center small text-muted">
+            &copy; 2026 PT. Indraco Global Indonesia <br> dikembangkan oleh Tim WEBDEV
+         </div><!-- end card login footer -->
+
+      </main><!-- end card login -->
+
+   </div><!-- end wrapper -->
+
+   <script src="../assets/vendors/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+   <script src="../assets/js/includes.js"></script>
+</body>
+
+</html>
